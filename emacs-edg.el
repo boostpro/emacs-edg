@@ -1,4 +1,4 @@
-(require 'c-mode)
+(require 'cc-mode)
 
 (add-to-list 'c-style-alist
              '("edg"
