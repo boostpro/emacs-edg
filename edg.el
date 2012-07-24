@@ -27,4 +27,4 @@
                (c-special-indent-hook . c-gnu-impose-minimum)
                (c-block-comment-prefix . "")))
 
-(provide 'emacs-edg)
+(provide 'edg)
