@@ -27,4 +27,24 @@
                (c-special-indent-hook . c-gnu-impose-minimum)
                (c-block-comment-prefix . "")))
 
+(define-minor-mode edg-mode
+  "Minor mode for editing EDG code.")
+
+(yas/define-snippets
+ 'cc-mode
+ '(("if" "if ($0) {\n}  /* if */" "if" edg-mode)
+
+   ("ife" "if ($0) {\n} else {\n}  /* if */" "ife" edg-mode)
+
+   ("switch"
+    "switch ($0) {\ncase :\nbreak;\ndefault:\nbreak;\n}  /* switch */"
+    "switch" edg-mode)
+
+   ("for" "for ($0; ; ) {\n}  /* for */" "for" edg-mode)
+
+   ("while" "while ($0) {\n}  /* while */" "while" edg-mode)
+
+   ("defun" "void $1($0) {\n}  /* $1 */" "defun" edg-mode)
+   ))
+
 (provide 'edg)
