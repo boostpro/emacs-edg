@@ -1,4 +1,5 @@
 (require 'cc-mode)
+(require 'yasnippet)
 
 (add-to-list 'c-style-alist
              '("edg"
